@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+    		<h2>Stock Prediction System</h2>	
+    	</div>
+	</header>
+
+	<div class="ml-container">
+
+    	<div id="div-results">
+    
+        	<h3>Summary:</h3>
+    	
+			{{ text_summary }}
+			<br>
+			<br>
+			<form class = "ml-container" method="POST" action="/prediction_sentiment"> <!-- note action -->
+				<input type="submit" class="btn-info" value="Predict Sentiment">
+			</form>
+			<br>
+			<br>
+			{{ text_sentiment }}
+
+			<br>
+			<br>
+			<form class = "ml-container" method="POST" action="/home"> <!-- note action -->
+				<input type="submit" class="btn-info" value="Back To Home Page">
+			</form>
+			<br>
+			<br>
+			
+    	</div>		
+	</div>
+	
+</body>
+</html>

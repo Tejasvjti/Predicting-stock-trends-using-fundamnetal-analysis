@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+    		<h2>Stock Prediction System</h2>	
+    	</div>
+	</header>
+
+	<form class = "ml-container" method="POST" action="{{ url_for('summarize')}}"> <!-- note action -->
+        <select name="select1"> <!-- note the name -->
+            <option value="TATA">TATA</option>
+            <option value="INFOSYS">INFOSYS</option>
+            <option value="MAHINDRA">MAHINDRA</option>
+            <option value="ADANI">ADANI</option>
+			<option value="RELIANCE">RELIANCE</option>
+			<option value="WIPRO">WIPRO</option>
+			<option value="HCL">HCL</option>
+			<option value="NESTLE">NESTLE</option>
+			<option value="DADUR">DADUR</option>
+			<option value="GODREJ">GODREJ</option>
+			<option value="PAYTM">PAYTM</option>
+			<option value="NETFLIX">NETFLIX</option>
+			
+            
+        </select>
+        <input type="submit" class="btn-info" value="Summarize">
+
+    </form>
+
+</body>
+</html>
+
+
+
